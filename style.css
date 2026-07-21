@@ -91,3 +91,30 @@ footer {
     border-radius: 30px;
     font-size: 18px;
 }
+nav {
+    background-color: #fffdf8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #5c7052;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #3d4037;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 17px;
+}
+
+.nav-links a:hover {
+    color: #71806b;
+}
