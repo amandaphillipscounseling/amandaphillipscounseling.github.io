@@ -126,3 +126,39 @@ nav {
 .nav-links a:hover {
     color: #71806b;
 }
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        margin: 8px 0;
+    }
+
+    header h1,
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    section {
+        margin: 20px 12px;
+        padding: 25px;
+    }
+}
