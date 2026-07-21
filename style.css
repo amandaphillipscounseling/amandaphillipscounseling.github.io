@@ -188,3 +188,6 @@ nav {
         margin: 10px 0;
     }
 }
+body {
+    border: 10px solid red;
+}
