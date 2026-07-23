@@ -105,10 +105,16 @@ nav {
     background: var(--sage);
     color: white;
     text-decoration: none;
-    padding: 14px 28px;
+    padding: 15px 35px;
     border-radius: 999px;
+    font-size: 18px;
+    transition: all .3s ease;
 }
 
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
 /* SECTIONS */
 
 section {
@@ -147,22 +153,51 @@ section h2 {
     align-items: center;
 }
 
-.photo-placeholder {
-    height: 350px;
-    border-radius: 20px;
-    background: #d8ddd4;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.photo-container {
+    position: relative;
 }
 
+.photo-container img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 25px;
+    display: block;
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+}
+.photo-container::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--sage);
+    border-radius: 50%;
+    bottom: -20px;
+    left: -20px;
+    z-index: -1;
+}
 /* FOOTER */
 
 footer {
     text-align: center;
     padding: 50px;
     color: var(--sage);
+}
+section {
+    animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
 
 /* MOBILE */
