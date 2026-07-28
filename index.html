@@ -4,177 +4,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Amanda Phillips Counseling | Child, Teen & Family Therapy</title>
+    <title>Amanda Phillips Counseling | Child, Teen &amp; Family Therapy in Simi Valley, CA</title>
 
     <meta name="description"
-          content="Child, teen, and family therapy in Simi Valley and throughout California via telehealth. Support for anxiety, trauma, emotional challenges, and life transitions.">
+          content="Child, teen, and family therapy in Simi Valley and throughout California via telehealth. Trauma-informed support for anxiety, big emotions, and life transitions.">
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,600&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<nav>
-    <div class="logo">
-        Amanda Phillips Counseling
-    </div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <button class="menu-toggle">☰</button>
+<nav>
+    <a href="#" class="logo">Amanda Phillips <span>Counseling</span></a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
 
     <div class="nav-links">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
-        <a href="#contact">Contact</a>
+        <a href="#start">Getting Started</a>
+        <a href="#contact" class="nav-cta">Contact</a>
     </div>
 </nav>
 
-<header class="hero">
+<main id="main">
 
-    <div class="hero-content">
+    <header class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">In-Person in Simi Valley &middot; Telehealth Throughout California</p>
 
-        <p class="eyebrow">
-            In-Person in Simi Valley • Telehealth Throughout California
+            <h1>Every behavior is telling a story. Let's understand it together.</h1>
+
+            <p class="hero-text">
+                Compassionate, trauma-informed therapy for children, teens, and families
+                working through anxiety, big emotions, and hard transitions.
+            </p>
+
+            <a href="#contact" class="button">Schedule a Consultation</a>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+            <svg viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg" class="branch-svg">
+                <path class="branch-line branch-main" d="M210 500 C 205 420, 215 360, 210 300 C 206 250, 214 210, 210 150" stroke="#6B7A5E" stroke-width="3" stroke-linecap="round"/>
+                <path class="branch-line branch-a" d="M210 320 C 170 300, 140 270, 110 235" stroke="#6B7A5E" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="branch-line branch-b" d="M210 250 C 250 230, 275 200, 300 170" stroke="#6B7A5E" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="branch-line branch-c" d="M210 190 C 185 160, 175 130, 165 95" stroke="#6B7A5E" stroke-width="2" stroke-linecap="round"/>
+                <path class="branch-line branch-d" d="M210 150 C 225 110, 230 85, 245 55" stroke="#6B7A5E" stroke-width="2" stroke-linecap="round"/>
+
+                <circle class="leaf" cx="110" cy="235" r="7" fill="#B08A4C"/>
+                <circle class="leaf" cx="300" cy="170" r="6" fill="#D8B8AE"/>
+                <circle class="leaf" cx="165" cy="95" r="6" fill="#B08A4C"/>
+                <circle class="leaf" cx="245" cy="55" r="8" fill="#6B7A5E"/>
+                <circle class="leaf" cx="210" cy="150" r="5" fill="#D8B8AE"/>
+            </svg>
+        </div>
+    </header>
+
+    <section class="intro reveal">
+        <h2>Does this sound familiar?</h2>
+
+        <div class="cards">
+            <div class="card">
+                <svg class="card-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 6c-8 0-14 6-14 13 0 5 3 9 7 11l-1 6 6-3c1 0 1.5.2 2 .2 8 0 14-6 14-13S28 6 20 6Z" stroke="#B08A4C" stroke-width="2"/></svg>
+                <h3>Anxiety</h3>
+                <p>Worries, fears, school stress, perfectionism, and the feeling of being overwhelmed.</p>
+            </div>
+
+            <div class="card">
+                <svg class="card-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 32s-12-7-12-16a7 7 0 0 1 12-5 7 7 0 0 1 12 5c0 9-12 16-12 16Z" stroke="#B08A4C" stroke-width="2"/></svg>
+                <h3>Big Emotions</h3>
+                <p>Meltdowns, anger, emotional overwhelm, or difficulty coping when things feel like too much.</p>
+            </div>
+
+            <div class="card">
+                <svg class="card-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="13" stroke="#B08A4C" stroke-width="2"/><path d="M20 13v8l6 3" stroke="#B08A4C" stroke-width="2" stroke-linecap="round"/></svg>
+                <h3>Trauma</h3>
+                <p>Things haven't felt the same since. It's hard to break free from the impact of the past.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about reveal">
+        <div class="about-grid">
+            <div class="photo-container">
+                <img src="images/amanda-headshot.jpg" alt="Amanda Phillips, Associate Professional Clinical Counselor">
+            </div>
+
+            <div class="about-copy">
+                <h2>Meet Amanda</h2>
+                <p class="credential">Amanda Phillips &middot; Associate Professional Clinical Counselor, APCC #14941</p>
+                <p class="supervisor">Practicing under the supervision of Debbie Ciulla, LMFT #98887</p>
+
+                <p>
+                    I provide a warm, collaborative, and trauma-informed approach grounded in
+                    attachment, humanistic, and family systems principles. I specialize in work
+                    with children and teens struggling with big emotions, anxiety, depression, or
+                    behavioral challenges &mdash; and with parents feeling exhausted by recurring
+                    patterns at home.
+                </p>
+
+                <p class="pull-quote">"Every behavior tells a story."</p>
+
+                <p>
+                    Whether your child is melting down, withdrawing, or struggling to cope, my
+                    goal isn't simply to stop the behavior &mdash; it's to understand the emotions
+                    and unmet needs beneath it, so lasting change can happen.
+                </p>
+
+                <p class="aside">Christian counseling is available for clients who would like it.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="reveal">
+        <h2>How I Can Help</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Children</h3>
+                <p>Anxiety, emotional regulation, trauma, confidence, and coping skills, using play-based and age-appropriate tools.</p>
+            </div>
+
+            <div class="card">
+                <h3>Teens</h3>
+                <p>Depression, identity, relationships, school stress, and the transitions that come with growing up.</p>
+            </div>
+
+            <div class="card">
+                <h3>Families</h3>
+                <p>Strengthening communication, connection, and understanding between parents and kids.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="approach reveal">
+        <h2>My Approach</h2>
+        <p class="approach-intro">
+            I draw from evidence-based, trauma-informed methods and tailor them to each client &mdash;
+            never a one-size-fits-all script.
         </p>
 
-        <h1>
-            Helping children, teens, and families feel understood, supported, and connected.
-        </h1>
-
-        <p class="hero-text">
-            I work alongside you to create joy and peace, one session at a time.
-        </p>
-
-        <a href="#contact" class="button">
-            Schedule a Consultation
-        </a>
-
-    </div>
-
-</header>
-
-<section class="intro">
-
-    <h2>Does this sound familiar?</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Anxiety</h3>
-            <p>Worries, fears, school stress, perfectionism, and feeling overwhelmed.</p>
+        <div class="approach-list">
+            <div class="approach-item">
+                <h3>Trauma-Focused CBT</h3>
+                <p>A structured approach that helps children and teens process difficult experiences and build healthier thought patterns.</p>
+            </div>
+            <div class="approach-item">
+                <h3>Emotion-Focused Work</h3>
+                <p>Helping clients name, understand, and regulate big feelings instead of being overwhelmed by them.</p>
+            </div>
+            <div class="approach-item">
+                <h3>Family Systems</h3>
+                <p>Looking at behavior in the context of relationships and home dynamics, not in isolation.</p>
+            </div>
+            <div class="approach-item">
+                <h3>Play-Based Interventions</h3>
+                <p>Meeting younger clients where they are, using play as a natural language for processing emotion.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Big Emotions</h3>
-            <p>Meltdowns, anger, emotional overwhelm, or difficulty coping.</p>
+    <section id="start" class="start reveal">
+        <h2>Getting Started</h2>
+
+        <div class="steps">
+            <div class="step">
+                <span class="step-mark" aria-hidden="true"></span>
+                <h3>Reach out</h3>
+                <p>Send a message or call to share a bit about what's going on for your child or family.</p>
+            </div>
+            <div class="step">
+                <span class="step-mark" aria-hidden="true"></span>
+                <h3>Brief consultation</h3>
+                <p>We'll talk by phone to see if we're a good fit and answer any questions you have.</p>
+            </div>
+            <div class="step">
+                <span class="step-mark" aria-hidden="true"></span>
+                <h3>First session</h3>
+                <p>A chance for us to get to know each other and start building a plan together.</p>
+            </div>
+            <div class="step">
+                <span class="step-mark" aria-hidden="true"></span>
+                <h3>Ongoing care</h3>
+                <p>Collaborative sessions, paced to what your family needs.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Trauma</h3>
-            <p>Things haven't felt the same. It feels hard to break free from the impact of the past.</p>
+    <section id="contact" class="contact reveal">
+        <h2>Contact</h2>
+        <p class="contact-sub">In-Person in Simi Valley &middot; Telehealth Throughout California</p>
+
+        <!--
+            FORM SETUP (free, takes about 5 minutes):
+            1. Go to formspree.io and create a free account (no credit card needed).
+            2. Create a new form. Formspree will give you an endpoint that looks like
+               https://formspree.io/f/abc12345
+            3. Replace YOUR_FORM_ID below (in the form's action attribute) with the
+               part after "/f/" — e.g. abc12345.
+            4. Formspree will email you to confirm the form before it goes live —
+               check your inbox after your first real test submission.
+        -->
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-row">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Phone <span class="optional">(optional)</span></label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <!-- Honeypot field to reduce spam — hidden from real visitors -->
+            <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button type="submit" class="button">Send Message</button>
+
+            <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-details">
+            <a href="mailto:amandaphillips.counseling@gmail.com">amandaphillips.counseling@gmail.com</a>
+            <a href="tel:+18058642492">(805) 864-2492</a>
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-<section id="about">
-
-    <div class="about-grid">
-
-        <div class="photo-container">
-
-    <img src="images/amanda-headshot.jpg" alt="Amanda Phillips, Associate Professional Clinical Counselor :)">
-
-</div>
-
-        <div>
-
-            <h2>Meet Amanda</h2>
-
-            <p>
-                Amanda Phillips, Associate Professional Clinical Counselor, APCC #14941
-            </p>
-
-            <p>
-                I provide a warm, collaborative, and trauma-informed approach grounded in attachment, humanistic, and family systems principles. I specialize in work with youth and teens struggling with big emotions, anxiety, depression, or behavioral issues, and parents feeling exhausted by recurring patterns at home. Every behavior tells a story. Whether your child is melting down, withdrawing, or struggling to cope, my goal isn't simply to stop the behavior - it's to understand the emotions and unmet needs beneath it so lasting change can occur.
-            </p>
-
-            <p>
-                For clients who desire it, Christian counseling is available.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="services">
-
-    <h2>How I Can Help</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Children</h3>
-            <p>Anxiety, emotional regulation, trauma, confidence, and coping skills.</p>
-        </div>
-
-        <div class="card">
-            <h3>Teens</h3>
-            <p>Depression, identity, relationships, school stress, and life transitions.</p>
-        </div>
-
-        <div class="card">
-            <h3>Families</h3>
-            <p>Strengthening communication, connection, and understanding.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<section id="approach">
-
-    <h2>My Approach</h2>
-
-    <p>
-        I integrate Trauma-Focused CBT, Emotion-Focused approaches,
-        family systems perspectives, play-based interventions, and
-        evidence-based care tailored to each client.
-    </p>
-
-</section>
-
-<section id="contact">
-
-    <h2>Contact</h2>
-
-    <p>
-        In-Person in Simi Valley<br>
-        Telehealth Throughout California
-    </p>
-
-    <p>
-        amandaphillips.counseling@gmail.com
-    </p>
-
-    <p>
-        (805) 864-2492
-    </p>
-
-</section>
+</main>
 
 <footer>
-
-    Amanda Phillips Counseling
-
+    <p>Amanda Phillips Counseling &middot; APCC #14941</p>
+    <p class="footer-note">Simi Valley, California</p>
 </footer>
 
 <script src="script.js"></script>
