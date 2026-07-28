@@ -53,17 +53,84 @@
 
         <div class="hero-art" aria-hidden="true">
             <svg viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg" class="branch-svg">
-                <path class="branch-line branch-main" d="M210 500 C 205 420, 215 360, 210 300 C 206 250, 214 210, 210 150" stroke="#6B7A5E" stroke-width="3" stroke-linecap="round"/>
-                <path class="branch-line branch-a" d="M210 320 C 170 300, 140 270, 110 235" stroke="#6B7A5E" stroke-width="2.5" stroke-linecap="round"/>
-                <path class="branch-line branch-b" d="M210 250 C 250 230, 275 200, 300 170" stroke="#6B7A5E" stroke-width="2.5" stroke-linecap="round"/>
-                <path class="branch-line branch-c" d="M210 190 C 185 160, 175 130, 165 95" stroke="#6B7A5E" stroke-width="2" stroke-linecap="round"/>
-                <path class="branch-line branch-d" d="M210 150 C 225 110, 230 85, 245 55" stroke="#6B7A5E" stroke-width="2" stroke-linecap="round"/>
+                <g class="plant-sway">
 
-                <circle class="leaf" cx="110" cy="235" r="7" fill="#B08A4C"/>
-                <circle class="leaf" cx="300" cy="170" r="6" fill="#D8B8AE"/>
-                <circle class="leaf" cx="165" cy="95" r="6" fill="#B08A4C"/>
-                <circle class="leaf" cx="245" cy="55" r="8" fill="#6B7A5E"/>
-                <circle class="leaf" cx="210" cy="150" r="5" fill="#D8B8AE"/>
+                    <path class="stem" d="M210 505 C 200 440, 220 400, 208 340 C 198 290, 218 250, 210 200 C 204 160, 214 120, 210 70"/>
+
+                    <!-- lower leaves (largest) -->
+                    <g transform="translate(206,455) rotate(-152)">
+                        <g class="leaf-grow" style="animation-delay:.35s">
+                            <path class="leaf-shape leaf-c1" d="M0,0 C10,-20 40,-26 60,-8 C48,10 18,16 0,0 Z"/>
+                            <path class="leaf-vein" d="M4,-3 C22,-10 42,-12 56,-7"/>
+                        </g>
+                    </g>
+
+                    <g transform="translate(212,450) rotate(-28)">
+                        <g class="leaf-grow" style="animation-delay:.55s">
+                            <path class="leaf-shape leaf-c2" d="M0,0 C10,-19 38,-25 57,-7 C46,10 17,15 0,0 Z"/>
+                            <path class="leaf-vein" d="M4,-3 C21,-9 40,-11 53,-6"/>
+                        </g>
+                    </g>
+
+                    <!-- mid leaves -->
+                    <g transform="translate(197,375) rotate(-160)">
+                        <g class="leaf-grow" style="animation-delay:.8s">
+                            <path class="leaf-shape leaf-c3" d="M0,0 C8,-16 32,-21 48,-6 C39,8 14,13 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-2 C17,-8 33,-9 45,-5"/>
+                        </g>
+                    </g>
+
+                    <g transform="translate(216,355) rotate(-18)">
+                        <g class="leaf-grow" style="animation-delay:1s">
+                            <path class="leaf-shape leaf-c1" d="M0,0 C8,-17 33,-22 50,-6 C41,9 15,14 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-2 C18,-8 34,-10 46,-5"/>
+                        </g>
+                    </g>
+
+                    <g transform="translate(199,285) rotate(-150)">
+                        <g class="leaf-grow" style="animation-delay:1.2s">
+                            <path class="leaf-shape leaf-c2" d="M0,0 C7,-14 28,-18 42,-5 C34,7 12,11 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-2 C15,-7 29,-8 39,-4"/>
+                        </g>
+                    </g>
+
+                    <!-- upper leaves (smallest) -->
+                    <g transform="translate(214,235) rotate(-15)">
+                        <g class="leaf-grow" style="animation-delay:1.4s">
+                            <path class="leaf-shape leaf-c3" d="M0,0 C6,-12 24,-16 36,-4 C29,6 10,10 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-1 C13,-6 25,-7 34,-3"/>
+                        </g>
+                    </g>
+
+                    <g transform="translate(200,165) rotate(-155)">
+                        <g class="leaf-grow" style="animation-delay:1.6s">
+                            <path class="leaf-shape leaf-c1" d="M0,0 C6,-11 22,-15 33,-4 C26,6 9,9 0,0 Z"/>
+                            <path class="leaf-vein" d="M2,-1 C12,-5 23,-6 31,-3"/>
+                        </g>
+                    </g>
+
+                    <g transform="translate(213,120) rotate(-12)">
+                        <g class="leaf-grow" style="animation-delay:1.8s">
+                            <path class="leaf-shape leaf-c2" d="M0,0 C5,-10 20,-13 29,-3 C23,5 8,8 0,0 Z"/>
+                            <path class="leaf-vein" d="M2,-1 C11,-5 20,-5 27,-2"/>
+                        </g>
+                    </g>
+
+                    <!-- small blossom at the top -->
+                    <g transform="translate(210,66)">
+                        <g class="leaf-grow" style="animation-delay:2.1s">
+                            <g class="blossom">
+                                <ellipse class="petal" cx="0" cy="-9" rx="6" ry="9"/>
+                                <ellipse class="petal" cx="8" cy="-3" rx="6" ry="9" transform="rotate(72 8 -3)"/>
+                                <ellipse class="petal" cx="5" cy="7" rx="6" ry="9" transform="rotate(144 5 7)"/>
+                                <ellipse class="petal" cx="-5" cy="7" rx="6" ry="9" transform="rotate(216 -5 7)"/>
+                                <ellipse class="petal" cx="-8" cy="-3" rx="6" ry="9" transform="rotate(288 -8 -3)"/>
+                                <circle class="blossom-center" cx="0" cy="0" r="4"/>
+                            </g>
+                        </g>
+                    </g>
+
+                </g>
             </svg>
         </div>
     </header>
@@ -213,7 +280,7 @@
             4. Formspree will email you to confirm the form before it goes live —
                check your inbox after your first real test submission.
         -->
-        <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xbdnwdwd" method="POST">
             <div class="form-row">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -253,6 +320,7 @@
 <footer>
     <p>Amanda Phillips Counseling &middot; APCC #14941</p>
     <p class="footer-note">Simi Valley, California</p>
+    <p class="footer-note"><a href="privacy.html">Privacy &amp; Telehealth Policy</a></p>
 </footer>
 
 <script src="script.js"></script>
