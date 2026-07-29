@@ -4,6 +4,7 @@
     --ink: #2E3527;
     --moss: #6B7A5E;
     --leaf-deep: #47563C;
+    --trunk-brown: #8A6B47;
     --gold: #B08A4C;
     --blush: #D8B8AE;
     --card: #FFFFFF;
@@ -238,14 +239,25 @@ nav {
     animation-delay: 2.6s;
 }
 
-.stem {
+.trunk {
     fill: none;
-    stroke: var(--leaf-deep);
-    stroke-width: 3;
+    stroke: var(--trunk-brown);
+    stroke-width: 8;
     stroke-linecap: round;
-    stroke-dasharray: 480;
-    stroke-dashoffset: 480;
-    animation: draw 1.8s ease forwards;
+    stroke-dasharray: 260;
+    stroke-dashoffset: 260;
+    animation: draw .9s ease forwards;
+}
+
+.branch {
+    fill: none;
+    stroke: var(--trunk-brown);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    opacity: 0;
+    animation: drawBranch .6s ease forwards;
 }
 
 .leaf-grow {
@@ -270,16 +282,12 @@ nav {
     stroke-linecap: round;
 }
 
-.blossom .petal {
-    fill: var(--blush);
-}
-
-.blossom-center {
-    fill: var(--gold);
-}
-
 @keyframes draw {
     to { stroke-dashoffset: 0; }
+}
+
+@keyframes drawBranch {
+    to { stroke-dashoffset: 0; opacity: 1; }
 }
 
 @keyframes leafGrow {
@@ -371,11 +379,14 @@ section h2 {
 .photo-container img {
     width: 100%;
     max-width: 340px;
+    min-height: 320px;
     display: block;
     border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
     box-shadow: 0 20px 40px rgba(46,53,39,.15);
     object-fit: cover;
     aspect-ratio: 1 / 1.1;
+    background: linear-gradient(160deg, var(--paper-deep), var(--blush));
+    color: transparent;
 }
 
 .photo-container::after {
