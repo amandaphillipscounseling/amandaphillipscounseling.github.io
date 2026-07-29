@@ -55,78 +55,91 @@
             <svg viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg" class="branch-svg">
                 <g class="plant-sway">
 
-                    <path class="stem" d="M210 505 C 200 440, 220 400, 208 340 C 198 290, 218 250, 210 200 C 204 160, 214 120, 210 70"/>
+                    <path class="trunk" d="M210 505 C 206 440, 214 400, 210 350 C 208 325, 210 312, 210 300"/>
 
-                    <!-- lower leaves (largest) -->
-                    <g transform="translate(206,455) rotate(-152)">
-                        <g class="leaf-grow" style="animation-delay:.35s">
-                            <path class="leaf-shape leaf-c1" d="M0,0 C10,-20 40,-26 60,-8 C48,10 18,16 0,0 Z"/>
-                            <path class="leaf-vein" d="M4,-3 C22,-10 42,-12 56,-7"/>
-                        </g>
-                    </g>
+                    <path class="branch" d="M210 300 C 185 292, 150 275, 130 255" style="animation-delay:.9s"/>
+                    <path class="branch" d="M210 300 C 195 270, 178 225, 168 195" style="animation-delay:1s"/>
+                    <path class="branch" d="M210 300 C 210 260, 210 195, 210 150" style="animation-delay:1.1s"/>
+                    <path class="branch" d="M210 300 C 225 270, 242 225, 253 195" style="animation-delay:1.2s"/>
+                    <path class="branch" d="M210 300 C 235 292, 270 275, 290 255" style="animation-delay:1.3s"/>
 
-                    <g transform="translate(212,450) rotate(-28)">
-                        <g class="leaf-grow" style="animation-delay:.55s">
-                            <path class="leaf-shape leaf-c2" d="M0,0 C10,-19 38,-25 57,-7 C46,10 17,15 0,0 Z"/>
-                            <path class="leaf-vein" d="M4,-3 C21,-9 40,-11 53,-6"/>
-                        </g>
-                    </g>
-
-                    <!-- mid leaves -->
-                    <g transform="translate(197,375) rotate(-160)">
-                        <g class="leaf-grow" style="animation-delay:.8s">
-                            <path class="leaf-shape leaf-c3" d="M0,0 C8,-16 32,-21 48,-6 C39,8 14,13 0,0 Z"/>
+                    <!-- a couple of leaves low on the trunk -->
+                    <g transform="translate(204,410) rotate(-160)">
+                        <g class="leaf-grow" style="animation-delay:.5s">
+                            <path class="leaf-shape leaf-c1" d="M0,0 C8,-16 32,-21 48,-6 C39,8 14,13 0,0 Z"/>
                             <path class="leaf-vein" d="M3,-2 C17,-8 33,-9 45,-5"/>
                         </g>
                     </g>
-
-                    <g transform="translate(216,355) rotate(-18)">
-                        <g class="leaf-grow" style="animation-delay:1s">
-                            <path class="leaf-shape leaf-c1" d="M0,0 C8,-17 33,-22 50,-6 C41,9 15,14 0,0 Z"/>
-                            <path class="leaf-vein" d="M3,-2 C18,-8 34,-10 46,-5"/>
+                    <g transform="translate(214,395) rotate(-20)">
+                        <g class="leaf-grow" style="animation-delay:.65s">
+                            <path class="leaf-shape leaf-c2" d="M0,0 C8,-15 30,-19 45,-6 C37,7 13,12 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-2 C16,-7 31,-8 42,-5"/>
                         </g>
                     </g>
 
-                    <g transform="translate(199,285) rotate(-150)">
-                        <g class="leaf-grow" style="animation-delay:1.2s">
-                            <path class="leaf-shape leaf-c2" d="M0,0 C7,-14 28,-18 42,-5 C34,7 12,11 0,0 Z"/>
+                    <!-- canopy: a small cluster of leaves at the tip of each branch -->
+                    <g transform="translate(130,255) rotate(-150)">
+                        <g class="leaf-grow" style="animation-delay:1.5s">
+                            <path class="leaf-shape leaf-c1" d="M0,0 C7,-14 28,-18 42,-5 C34,7 12,11 0,0 Z"/>
                             <path class="leaf-vein" d="M3,-2 C15,-7 29,-8 39,-4"/>
                         </g>
                     </g>
+                    <g transform="translate(130,255) rotate(-95)">
+                        <g class="leaf-grow" style="animation-delay:1.6s">
+                            <path class="leaf-shape leaf-c3" d="M0,0 C7,-13 26,-17 39,-5 C32,6 11,10 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-2 C14,-6 27,-7 36,-4"/>
+                        </g>
+                    </g>
 
-                    <!-- upper leaves (smallest) -->
-                    <g transform="translate(214,235) rotate(-15)">
-                        <g class="leaf-grow" style="animation-delay:1.4s">
-                            <path class="leaf-shape leaf-c3" d="M0,0 C6,-12 24,-16 36,-4 C29,6 10,10 0,0 Z"/>
+                    <g transform="translate(165,195) rotate(-160)">
+                        <g class="leaf-grow" style="animation-delay:1.7s">
+                            <path class="leaf-shape leaf-c2" d="M0,0 C7,-13 27,-17 40,-5 C33,7 12,10 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-2 C14,-6 28,-8 37,-4"/>
+                        </g>
+                    </g>
+                    <g transform="translate(165,195) rotate(-100)">
+                        <g class="leaf-grow" style="animation-delay:1.8s">
+                            <path class="leaf-shape leaf-c1" d="M0,0 C6,-12 25,-16 37,-4 C30,6 10,9 0,0 Z"/>
                             <path class="leaf-vein" d="M3,-1 C13,-6 25,-7 34,-3"/>
                         </g>
                     </g>
 
-                    <g transform="translate(200,165) rotate(-155)">
-                        <g class="leaf-grow" style="animation-delay:1.6s">
-                            <path class="leaf-shape leaf-c1" d="M0,0 C6,-11 22,-15 33,-4 C26,6 9,9 0,0 Z"/>
-                            <path class="leaf-vein" d="M2,-1 C12,-5 23,-6 31,-3"/>
+                    <g transform="translate(210,150) rotate(-165)">
+                        <g class="leaf-grow" style="animation-delay:1.9s">
+                            <path class="leaf-shape leaf-c3" d="M0,0 C6,-12 25,-16 37,-4 C30,6 10,9 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-1 C13,-6 25,-7 34,-3"/>
+                        </g>
+                    </g>
+                    <g transform="translate(210,150) rotate(-15)">
+                        <g class="leaf-grow" style="animation-delay:2s">
+                            <path class="leaf-shape leaf-c2" d="M0,0 C6,-12 25,-16 37,-4 C30,6 10,9 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-1 C13,-6 25,-7 34,-3"/>
                         </g>
                     </g>
 
-                    <g transform="translate(213,120) rotate(-12)">
-                        <g class="leaf-grow" style="animation-delay:1.8s">
-                            <path class="leaf-shape leaf-c2" d="M0,0 C5,-10 20,-13 29,-3 C23,5 8,8 0,0 Z"/>
-                            <path class="leaf-vein" d="M2,-1 C11,-5 20,-5 27,-2"/>
-                        </g>
-                    </g>
-
-                    <!-- small blossom at the top -->
-                    <g transform="translate(210,66)">
+                    <g transform="translate(253,195) rotate(-80)">
                         <g class="leaf-grow" style="animation-delay:2.1s">
-                            <g class="blossom">
-                                <ellipse class="petal" cx="0" cy="-9" rx="6" ry="9"/>
-                                <ellipse class="petal" cx="8" cy="-3" rx="6" ry="9" transform="rotate(72 8 -3)"/>
-                                <ellipse class="petal" cx="5" cy="7" rx="6" ry="9" transform="rotate(144 5 7)"/>
-                                <ellipse class="petal" cx="-5" cy="7" rx="6" ry="9" transform="rotate(216 -5 7)"/>
-                                <ellipse class="petal" cx="-8" cy="-3" rx="6" ry="9" transform="rotate(288 -8 -3)"/>
-                                <circle class="blossom-center" cx="0" cy="0" r="4"/>
-                            </g>
+                            <path class="leaf-shape leaf-c1" d="M0,0 C7,-13 27,-17 40,-5 C33,7 12,10 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-2 C14,-6 28,-8 37,-4"/>
+                        </g>
+                    </g>
+                    <g transform="translate(253,195) rotate(-20)">
+                        <g class="leaf-grow" style="animation-delay:2.2s">
+                            <path class="leaf-shape leaf-c3" d="M0,0 C6,-12 25,-16 37,-4 C30,6 10,9 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-1 C13,-6 25,-7 34,-3"/>
+                        </g>
+                    </g>
+
+                    <g transform="translate(290,255) rotate(-85)">
+                        <g class="leaf-grow" style="animation-delay:2.3s">
+                            <path class="leaf-shape leaf-c2" d="M0,0 C7,-14 28,-18 42,-5 C34,7 12,11 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-2 C15,-7 29,-8 39,-4"/>
+                        </g>
+                    </g>
+                    <g transform="translate(290,255) rotate(-30)">
+                        <g class="leaf-grow" style="animation-delay:2.4s">
+                            <path class="leaf-shape leaf-c1" d="M0,0 C6,-12 25,-16 37,-4 C30,6 10,9 0,0 Z"/>
+                            <path class="leaf-vein" d="M3,-1 C13,-6 25,-7 34,-3"/>
                         </g>
                     </g>
 
@@ -280,7 +293,7 @@
             4. Formspree will email you to confirm the form before it goes live —
                check your inbox after your first real test submission.
         -->
-        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xbdnwdwd" method="POST">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <div class="form-row">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
