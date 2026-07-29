@@ -164,18 +164,18 @@ nav {
 
 .hero {
     position: relative;
-    padding: 130px 8% 110px;
-    text-align: center;
-    background:
-        linear-gradient(160deg, rgba(246,241,231,.93), rgba(246,241,231,.85) 55%, rgba(246,241,231,.93)),
-        url("https://images.unsplash.com/photo-1514707363198-72452c95dd48?w=1800&auto=format&fit=crop&q=80");
-    background-size: cover;
-    background-position: center 65%;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    padding: 110px 0 100px 8%;
+    overflow: hidden;
+    background: var(--paper);
 }
 
 .hero-content {
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 620px;
+    position: relative;
+    z-index: 2;
 }
 
 .eyebrow {
@@ -187,17 +187,24 @@ nav {
 }
 
 .hero h1 {
-    font-size: 3.4rem;
+    font-size: 3.1rem;
     font-weight: 450;
     margin-top: 14px;
+    margin-bottom: 0;
+}
+
+.hero-rule {
+    width: 90px;
+    height: 2px;
+    background: var(--gold);
+    border: none;
+    margin: 28px 0;
 }
 
 .hero-text {
     font-size: 1.15rem;
     color: #4b5240;
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 480px;
 }
 
 .button {
@@ -216,6 +223,22 @@ nav {
 .button:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 24px rgba(176,138,76,.35);
+}
+
+.hero-branch {
+    justify-self: end;
+    width: 46vw;
+    max-width: 560px;
+    min-width: 320px;
+    transform: translateX(8%);
+    opacity: 0;
+    animation: branchIn 1.4s ease forwards;
+    animation-delay: .2s;
+}
+
+@keyframes branchIn {
+    from { opacity: 0; transform: translateX(14%) translateY(10px); }
+    to { opacity: 1; transform: translateX(8%) translateY(0); }
 }
 
 /* SECTIONS */
@@ -601,7 +624,31 @@ footer {
 
 @media (max-width: 860px) {
     .hero {
-        padding: 90px 8% 70px;
+        grid-template-columns: 1fr;
+        padding: 70px 8% 0;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .hero-rule {
+        margin: 24px auto;
+    }
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-branch {
+        justify-self: center;
+        width: 70vw;
+        max-width: 320px;
+        margin-top: 30px;
+        transform: none;
+    }
+    @keyframes branchIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
     .hero h1 {
         font-size: 2.6rem;
