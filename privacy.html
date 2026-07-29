@@ -1,76 +1,134 @@
-// Mobile menu toggle
-const menuButton = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-menuButton.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("active");
-    menuButton.classList.toggle("active", isOpen);
-    menuButton.setAttribute("aria-expanded", isOpen);
-});
+    <title>Privacy &amp; Telehealth Policy | Amanda Phillips Counseling</title>
 
-// Close the mobile menu after a link is tapped
-navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuButton.classList.remove("active");
-        menuButton.setAttribute("aria-expanded", "false");
-    });
-});
+    <meta name="description"
+          content="Privacy practices and telehealth consent information for Amanda Phillips Counseling, Simi Valley, CA.">
 
-// Contact form submission (Formspree)
-const contactForm = document.getElementById("contact-form");
-const formStatus = contactForm ? contactForm.querySelector(".form-status") : null;
+    <link rel="stylesheet" href="style.css">
 
-if (contactForm) {
-    contactForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,600&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        const submitButton = contactForm.querySelector("button[type='submit']");
-        submitButton.disabled = true;
-        formStatus.textContent = "Sending...";
-        formStatus.className = "form-status";
+<a class="skip-link" href="#main">Skip to content</a>
 
-        try {
-            const response = await fetch(contactForm.action, {
-                method: "POST",
-                body: new FormData(contactForm),
-                headers: { Accept: "application/json" },
-            });
+<nav>
+    <a href="index.html" class="logo">Amanda Phillips <span>Counseling</span></a>
 
-            if (response.ok) {
-                formStatus.textContent = "Thanks for reaching out — I'll be in touch soon.";
-                formStatus.className = "form-status success";
-                contactForm.reset();
-            } else {
-                formStatus.textContent = "Something went wrong. Please email or call directly.";
-                formStatus.className = "form-status error";
-            }
-        } catch (error) {
-            formStatus.textContent = "Something went wrong. Please email or call directly.";
-            formStatus.className = "form-status error";
-        } finally {
-            submitButton.disabled = false;
-        }
-    });
-}
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
 
-// Gentle scroll-reveal for sections
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#approach">Approach</a>
+        <a href="index.html#start">Getting Started</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+    </div>
+</nav>
 
-if (prefersReducedMotion) {
-    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in-view"));
-} else {
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("in-view");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.15 }
-    );
+<main id="main">
 
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-}
+    <section class="policy-page reveal">
+        <p class="eyebrow">Effective for website visitors and clients</p>
+        <h1>Privacy &amp; Telehealth Policy</h1>
+
+        <p class="policy-note">
+            This page explains how this website handles your information, and gives you
+            general information about confidentiality and telehealth before you begin
+            services. It is a general overview and does not replace the informed consent
+            paperwork you will review and sign before starting therapy.
+        </p>
+
+        <h2>Website Privacy</h2>
+        <p>
+            If you use the contact form on this site, the information you enter (such as
+            your name, email, phone number, and message) is sent securely to Amanda Phillips
+            using a third-party form service, Formspree. That information is used only to
+            respond to your inquiry. It is not sold, shared with advertisers, or used for
+            marketing.
+        </p>
+        <p>
+            This website does not knowingly collect information from children. If you are
+            a parent or guardian reaching out on behalf of a minor, please submit the form
+            yourself rather than having your child do so.
+        </p>
+        <p>
+            This site may use basic, aggregated analytics to understand how visitors use the
+            site. This data does not identify you personally.
+        </p>
+
+        <h2>Confidentiality</h2>
+        <p>
+            What you share in therapy is confidential and protected by law and professional
+            ethics. There are limited exceptions where confidentiality may need to be broken,
+            generally including:
+        </p>
+        <ul>
+            <li>There is reason to believe a child, elder, or dependent adult is being abused or neglected</li>
+            <li>There is a serious risk of harm to yourself or another specific person</li>
+            <li>Disclosure is required by a court order or by law</li>
+        </ul>
+        <p>
+            These exceptions, along with any others that apply to your specific situation,
+            will be explained fully and in writing before you begin therapy.
+        </p>
+
+        <h2>Telehealth Consent — General Information</h2>
+        <p>
+            Telehealth sessions are offered by video for clients located within California
+            at the time of the session, consistent with California licensing requirements.
+            Before beginning telehealth, it's helpful to know:
+        </p>
+        <ul>
+            <li>You'll need a private, quiet space and a stable internet connection for each session.</li>
+            <li>As with any technology, there is some risk that a video or internet connection could be interrupted or, in rare cases, intercepted. Reasonable safeguards are used to protect your privacy, but no method of electronic communication is completely without risk.</li>
+            <li>Telehealth is not appropriate for every situation. If a concern arises that would be better addressed in person or through a higher level of care, you'll be given a referral.</li>
+            <li>You'll be asked to share your physical location at the start of each telehealth session, along with a local emergency contact, in case of a technology failure or an urgent safety concern.</li>
+        </ul>
+
+        <h2>In Case of Emergency</h2>
+        <p>
+            This practice does not provide 24-hour crisis coverage. If you are experiencing
+            a mental health emergency, please call or text <strong>988</strong> (Suicide &amp;
+            Crisis Lifeline), call <strong>911</strong>, or go to your nearest emergency room.
+        </p>
+
+        <h2>Questions</h2>
+        <p>
+            If you have questions about any of the above, you're welcome to ask before your
+            first session:
+        </p>
+        <div class="contact-details policy-contact">
+            <a href="mailto:amandaphillips.counseling@gmail.com">amandaphillips.counseling@gmail.com</a>
+            <a href="tel:+18058642492">(805) 864-2492</a>
+        </div>
+
+        <p class="policy-disclaimer">
+            Note: this page is a general-purpose template and does not constitute legal
+            advice. It should be reviewed by Debbie Ciulla, LMFT, and updated as needed to
+            reflect current California law, BBS requirements, and this practice's specific
+            policies before publishing.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Amanda Phillips Counseling &middot; APCC #14941</p>
+    <p class="footer-note">Simi Valley, California</p>
+    <p class="footer-note"><a href="privacy.html">Privacy &amp; Telehealth Policy</a></p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
