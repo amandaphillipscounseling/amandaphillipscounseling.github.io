@@ -2,22 +2,20 @@
 const menuButton = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-if (menuButton && navLinks) {
-    menuButton.addEventListener("click", () => {
-        const isOpen = navLinks.classList.toggle("active");
-        menuButton.classList.toggle("active", isOpen);
-        menuButton.setAttribute("aria-expanded", isOpen);
-    });
+menuButton.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("active");
+    menuButton.classList.toggle("active", isOpen);
+    menuButton.setAttribute("aria-expanded", isOpen);
+});
 
-    // Close the mobile menu after a link is tapped
-    navLinks.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-            menuButton.classList.remove("active");
-            menuButton.setAttribute("aria-expanded", "false");
-        });
+// Close the mobile menu after a link is tapped
+navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuButton.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
     });
-}
+});
 
 // Contact form submission (Formspree)
 const contactForm = document.getElementById("contact-form");
@@ -55,17 +53,6 @@ if (contactForm) {
         }
     });
 }
-
-// FAQ accordion
-document.querySelectorAll(".faq-item").forEach((item) => {
-    const question = item.querySelector(".faq-question");
-    if (!question) return;
-
-    question.addEventListener("click", () => {
-        const isOpen = item.classList.toggle("open");
-        question.setAttribute("aria-expanded", isOpen);
-    });
-});
 
 // Gentle scroll-reveal for sections
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
